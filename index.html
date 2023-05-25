@@ -1,10 +1,166 @@
+<!DOCTYPE html>
 <html>
-	<head>
+<head>
+  <meta charset="utf-8">
+  <title>Comandos de Git, SSH y Docker</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-<meta charset="utf8">
-<title>página del qbo</title></head>
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      overflow-x: hidden;
+    }
 
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0;
+    }
+
+    nav a {
+      display: block;
+      color: #f2f2f2;
+      padding: 15px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      background-color: #666;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 50px;
+       }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
 <body>
-<h1> espero que poe me saque del apuro de la escritra</h1>
+  <nav>
+    <ul>
+      <li><a href="#git">Git</a></li>
+      <li><a href="#ssh">SSH</a></li>
+      <li><a href="#docker">Docker</a></li>
+    </ul>
+  </nav>
+
+  <section id="git">
+    <h1>Comandos de Git</h1>
+    <table>
+      <tr>
+        <th>Comando</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+      </tr>
+      <tr>
+        <td>git init</td>
+        <td>Crea un nuevo repositorio Git vacío.</td>
+        <td>git init</td>
+      </tr>
+      <tr>
+        <td>git add</td>
+        <td>Agrega cambios al área de preparación.</td>
+        <td>git add archivo.txt</td>
+      </tr>
+      <tr>
+        <td>git commit</td>
+        <td>Registra los cambios en el repositorio.</td>
+        <td>git commit-m "Mensaje de confirmación"</td>
+      </tr>
+      <tr>
+        <td>git push</td>
+        <td>Envía los cambios locales al repositorio remoto.</td>
+        <td>git push origin master</td>
+      </tr>
+      <tr>
+        <td>git pull</td>
+        <td>Obtiene los cambios remotos y los fusiona con los cambios locales.</td>
+        <td>git pull origin master</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="ssh">
+    <h1>Creación de claves SSH</h1>
+    <p>Para crear un par de claves SSH, sigue los siguientes pasos:</p>
+    <ol>
+      <li>Abre una terminal en tu equipo.</li>
+      <li>Ejecuta el siguiente comando para generar una nueva clave SSH:</li>
+      <pre><code>ssh-keygen -t rsa -b 4096 -C "tu_correo_electrónico"</code></pre>
+      <li>Sigue las instrucciones para guardar la clave en un archivo.</li>
+    </ol>
+  </section>
+
+  <section id="docker">
+    <h1>Comandos de Docker</h1>
+    <p>Para instalar Docker, sigue los siguientes pasos:</p>
+    <ol>
+      <li>Descarga e instala Docker para tu sistema operativo desde el sitio web oficial de Docker.</li>
+      <li>Asegúrate de que Docker se esté ejecutando correctamente ejecutando el comando:</li>
+      <pre><code>sudo docker run hello-world</code></pre>
+    </ol>
+
+    <p>A continuación, se muestran algunos de los comandos más comunes de Docker:</p>
+    <table>
+      <tr>
+        <th>Comando</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+      </tr>
+      <tr>
+        <td>docker build</td>
+        <td>Construye una imagen Docker a partir de un archivo Dockerfile.</td>
+        <td>docker build -t myimage:1.0 .</td>
+      </tr>
+      <tr>
+        <td>docker run</td>
+        <td>Ejecuta un contenedor Docker basado en una imagen.</td>
+        <td>docker run -p 8080:80 myimage:1.0</td>
+      </tr>
+      <tr>
+        <td>docker ps</td>
+        <td>Muestra todos los contenedores Docker en ejecución.</td>
+        <td>docker ps</td>
+      </tr>
+      <tr>
+        <td>docker stop</td>
+        <td>Detiene un contenedor Docker en ejecución.</td>
+        <td>docker stop container_id</td>
+      </tr>
+      <tr>
+        <td>docker rm</td>
+        <td>Elimina un contenedor Docker existente.</td>
+        <td>docker rm container_id</td>
+      </tr>
+    </table>
+  </section>
 </body>
 </html>
